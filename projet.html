@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Devine le Nombre</title>
+    <link rel="stylesheet" href="projet.css">
+</head>
+<body>
+    <div id="stars-container">✨🌟🎉 Bravo ! 🎉🌟✨</div>
+
+    <div class="container">
+        <h1>🔎🔍 <br> 
+            À toi de deviner !</h1>
+        <div class="difficulty">
+            <button onclick="setDifficulty('easy')">Facile</button>
+            <button onclick="setDifficulty('medium')">Moyen</button>
+            <button onclick="setDifficulty('hard')">Difficile</button>
+        </div>
+        <div class="game" id="game" style="display:none;">
+            <p>Nombre entre <span id="rangeMin">1</span> et <span id="rangeMax">100</span></p>
+            <input type="number" id="guessInput" placeholder="Votre proposition">
+            <button onclick="makeGuess()">Valider</button>
+            <p id="feedback"></p>""
+            <p>Chances restantes : <span id="attemptsLeft"></span></p>
+            <p>⏱ Temps : <span id="timer">00:00</span></p>
+            <p>Score : <span id="score">0</span> | 🏆 Meilleur score : <span id="bestScore">0</span></p>
+            <button onclick="resetGame()">Nouveau Jeu</button>
+        </div>
+    </div>
+    <script src="projet.js"></script>
+</body>
+</html>
